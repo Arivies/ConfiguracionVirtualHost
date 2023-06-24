@@ -1,0 +1,15 @@
+<VirtualHost *:80>
+    ServerName website.local
+    ServerAlias www.website.local
+    ServerAdmin webmaster@website.local
+    DocumentRoot /var/www/html/DirProyecto/
+ 
+    <Directory /var/www/html/DirProyecto>
+        Options Indexes FollowSymLinks
+        AllowOverride All
+        Require all granted
+    </Directory>
+ 
+    ErrorLog ${APACHE_LOG_DIR}/ejemplo.com-error.log
+    CustomLog ${APACHE_LOG_DIR}/ejemplo.com-access.log combined
+</VirtualHost>
